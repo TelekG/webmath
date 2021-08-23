@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Összeadás és kivonás</title>
+        <!-- saját CSS -->
+        <link rel="stylesheet" href="stilus.css" type="text/css">
+        <!-- foundation ikonok -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"
+            integrity="sha512-kDmbIQZ10fxeKP5NSt3+tz77HO42IJiS+YPIirOIKTdokl4LtuXYo3NNvq9mTAF+rzdV1plp0sm9E6nvtVpnFQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;447;500&display=swap" rel="stylesheet">
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <i class="fi-align-justify" id="valaszto"></i>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html"><i class="fi-home"></i> Kezdőlap</a></li>
+                <li><a href="stage_2.html"><i class="fi-die-two"></i>Második lecke</a></li>
+                <li><a href="stage_3.html"><i class="fi-die-three"></i>Harmadik lecke</a></li>
+                <li><a href="stage_4.html"><i class="fi-die-four"></i>Negyedik lecke</a></li>
+                <li><a href="stage_5.html"><i class="fi-die-five"></i>Ötödik lecke</a></li>
+                <li><a href="stage_6.html"><i class="fi-die-six"></i>Hatodik lecke</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Ezen az oldalon az összeadást és a kivonást gyakorolhatod</h1>
+            <hr>
+        </main>
+        <!-- JavaScript betöltése, de ne a html előtt -->
+        <script defer src="scriptek.js"></script>
+        <h2>Ha készen állsz kezdjünk hozzá!</h2><br>
+
+        <p>
+            A "Kezdjük!" gombot lenyomva a feladatod az, hogy a megjelenő műveletek eredményét írd be a mezőbe és ha
+            végeztél nyomd meg a Kész gombot. Ha az eredmény helyes, akkor kapsz egy pontot, ha nem akkor viszont eggyel
+            csökkenek majd a pontjaid száma.
+        </p>
+        <!-- Kezdőgomb -->
+        <p>
+            <button id="start">Kezdjük!</button>
+        </p>
+        <!-- Nyeremény -->
+        <div id="win">
+
+        </div>
+        <!-- Kérdés -->
+        <div id="question">
+
+        </div>
+        <!-- Kiértékelés -->
+        <div id="alertsDiv">
+            <p id="alerts"></p>
+        </div>
+        <!-- Beviteli mező -->
+        <div id="inputs" class="hidden">
+            <p>
+                Írd ide az eredményt:
+                <input type="number" id="result" size="15" min="-200" max="200" />
+                <button id="send">Kész</button>
+            </p>
+        </div>
+        <!-- Pontszám kiírás -->
+        <div id="scoreDiv">
+
+        </div>
+
+    </body>
+
+</html>

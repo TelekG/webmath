@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Szorzás</title>
+        <!-- saját CSS -->
+        <link rel="stylesheet" href="stilus.css" type="text/css">
+        <!-- foundation ikonok -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"
+            integrity="sha512-kDmbIQZ10fxeKP5NSt3+tz77HO42IJiS+YPIirOIKTdokl4LtuXYo3NNvq9mTAF+rzdV1plp0sm9E6nvtVpnFQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;447;500&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <i class="fi-align-justify" id="valaszto"></i>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html"><i class="fi-home"></i> Kezdőlap</a></li>
+                <li><a href="stage_1.html"><i class="fi-die-one"></i>Első lecke</a></li>
+                <li><a href="stage_3.html"><i class="fi-die-three"></i>Harmadik lecke</a></li>
+                <li><a href="stage_4.html"><i class="fi-die-four"></i>Negyedik lecke</a></li>
+                <li><a href="stage_5.html"><i class="fi-die-five"></i>Ötödik lecke</a></li>
+                <li><a href="stage_6.html"><i class="fi-die-six"></i>Hatodik lecke</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Ezen az oldalon a szorzás gyakorlására kapsz lehetőséget</h1>
+            <hr>
+        </main>
+        <script defer src="script2.js"></script>
+
+        <p>
+            Hasonlóan az előző leckéhez itt is a "Kezdjük!" gombbal indíthatod a feladatot. Ez esetben szorzás műveletére kapsz megoldandó példákat.
+             Remélhetőleg ezeket a feladatokat is ugyanúgy sikerül fejben megoldanod, mint az előző lecke összeadás, kivonás példáit. Hajrá, 
+             mutasd meg mire vagy képes, a megjelenő műveletek eredményét írd be a mezőbe és ha végeztél nyomd
+            meg a Kész gombot. Ha az eredmény helyes, akkor kapsz egy pontot, ha nem akkor viszont eggyel csökkenek majd
+            a
+            pontjaid száma.
+        </p>
+
+        <!-- Kezdőgomb -->
+        <p>
+            <button id="start2">Kezdjük!</button>
+        </p>
+
+        <div id="question2"></div>
+
+        <div id="alertsDiv2">
+            <p id="alerts2"></p>
+        </div>
+        
+        <div id="inputs2" class="hidden">
+            <p>
+                Írd ide az eredményt:
+                <input type="number" id="result2" min="0" max="900" size="15"/>  
+                <button id="send2">Kész</button>
+            </p>
+        </div>
+        <!-- Pontszám kiírás -->
+        <div id="scoreDiv2">
+
+        </div>
+
+    </body>
+
+</html>

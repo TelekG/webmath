@@ -1,0 +1,152 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+    background: #ffe6cc;    /*háttérszín*/
+    color: #283d3b;         /*szövegszín*/
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;      /*felsorolás szimbólum elrejtése*/
+    padding: 0 1.5rem 0 1rem;   
+    line-height: 3rem;          /*sor(köz)távolság*/
+}
+
+ol{
+    list-style-type: circle;      /*felsorolás szimbólum üres kör*/
+    padding: 0 14rem 0 18rem;   
+    line-height: 2rem;          /*sor(köz)távolság*/
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: initial;
+}
+
+li{
+    white-space: nowrap;        /*szóközöknél nincs törés*/
+}
+
+i{
+    margin-right: 1rem;         /*ikon és a szöveg közötti hézag*/
+}
+
+h1{
+    font-size: 1.8rem;          /*h1 betűméret csökkentése*/
+    text-align: center;    
+}
+
+h2{
+    text-align: center;
+    padding-top: 2rem; 
+}
+
+h3{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+p{
+    padding: 0 14rem 0 14rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: initial;
+    text-align: justify;
+}
+
+header{
+    margin-bottom: 1rem;
+    display: flex;
+    height: 4.5rem;
+    justify-content: space-between;
+}
+
+#valaszto{
+    margin: 1rem 0 0 2.5rem;    /*ikon igazítása*/
+    color: #ffe6cc;         /*header ikon szín*/
+    background: #197278;    /*header ikon háttérszín*/
+    font-size: 1.5rem;
+    z-index: 2;
+    border-radius: 50%;
+    padding: 0.8rem 0.8rem 0.8rem 1rem;
+    width: 1.3rem;
+    cursor: pointer;    /*kéz egér mutató*/
+}
+
+nav{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: #197278;    /*navigációs sáv háttérszín*/
+    color: #ffe6cc;         /*sávon lévő elemek színe*/
+    transform: translateX(-12rem);
+    padding-top: 3.8rem;
+    transition: transform 350ms ease-in-out;    /*az elrejtés sebessége és karakterisztikája*/
+}
+
+nav a{
+    color: #ffe6cc;
+    text-decoration: none;  /*aláhúzás elrejtése*/
+    font-weight: bold;
+}
+
+.menu-active{
+    transform: translateX(0);
+
+}
+
+main h1{
+    margin: 0 1rem;
+}
+
+#greeting{
+    text-align: center;      
+}
+
+#scoreDiv, #question, #scoreDiv2, #question2{    
+    padding: 0 14rem 0 14rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: initial;
+}
+
+#inputs p, #inputs2 p{
+    padding: 0 14rem 0 14rem;
+}
+
+#alertsDiv p, #alertsDiv2 p{
+    padding: 0 14rem 0 14rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: initial;
+}
+
+#start, #start2{
+    padding: 1rem 10rem 1rem 10rem;
+    margin-left: 14rem;    
+    text-align: center; 
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#start:hover, #start2:hover{
+    background: #21ca0b;           
+}
+
+#send, #send2{
+    text-align: center; 
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;   
+}
+
+.hidden{
+    display: none;    
+}
+
+#win{
+    float: right;
+    padding: 0 10rem 0 1rem; 
+}
