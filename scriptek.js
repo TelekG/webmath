@@ -20,7 +20,7 @@ function init() {
     renderScore();
 }
 
-//Renders
+//Renders, megjelenítések
 function renderScore() {
     scoreDiv.innerHTML = `Aktuális pontszám: ${score}`;
 }
@@ -49,7 +49,7 @@ function removeAlerts() {
 //Handlers
 //Véletlen számgenerátor 0 és 100 között
 function generate() {
-    return Math.floor(Math.random() * 11);
+    return Math.floor(Math.random() * 101);
 }
 // Műveletijel generátor
 function operating() {
@@ -81,9 +81,31 @@ function setScore() {
     check() ? score++ : score--;
 }
 //Ha nyer akkor indul az animáció
-function setWin() {    
-    score > 1 ? win.innerHTML = `<img src="children.jpg" width="300" height="200">` : win.innerHTML = ""; 
+function setWin() {
+    score > 4 ? win.innerHTML = `<img src="children.jpg" width="300" height="200">` : win.innerHTML = "";
 }
+//Minden beállított eseményre meghívom az eseménykezelőt
+function setInputFilter(textbox, inputFilter) {
+    ["input", "keydown"].forEach(function (event) {
+        textbox.addEventListener(event, function () {
+            if (inputFilter(this.value)) {
+                this.oldValue = this.value;
+                this.oldSelectionStart = this.selectionStart;
+                this.oldSelectionEnd = this.selectionEnd;
+            } else if (this.hasOwnProperty("oldValue")) {
+                this.value = this.oldValue;
+                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+            } else {
+                this.value = "";
+            }
+        });
+    });
+};
+//Reguláris kifejezésekkel szűröm a beírható karaktereket, maximum 3 karakter hossz
+setInputFilter(document.getElementById('result'), function (value) {
+    return /^-?\d{0,3}$/.test(value);
+});
+  
 //Esemény kezelők
 start.addEventListener('click', () => {
     getNumbers();
