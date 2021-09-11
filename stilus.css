@@ -1,10 +1,22 @@
 body{
-    font-family: 'Quicksand', sans-serif;
-    background: #ffe6cc;    /*háttérszín*/
+    font-family: 'Quicksand', sans-serif;    
     color: #283d3b;         /*szövegszín*/
     margin: 0;
     padding: 0;
 }
+body::after {
+    content: "";
+    background: url("background.jpg");
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    z-index: -1;
+    }
 
 ul{
     list-style-type: none;      /*felsorolás szimbólum elrejtése*/
@@ -65,7 +77,7 @@ header{
 #valaszto{
     margin: 1rem 0 0 2.5rem;    /*ikon igazítása*/
     color: #ffe6cc;         /*header ikon szín*/
-    background: #197278;    /*header ikon háttérszín*/
+    background: #4961ec;    /*header ikon háttérszín*/
     font-size: 1.5rem;
     z-index: 2;
     border-radius: 50%;
@@ -78,7 +90,7 @@ nav{
     position: absolute;
     top: 0;
     height: 100%;
-    background: #197278;    /*navigációs sáv háttérszín*/
+    background: #4961ec;    /*navigációs sáv háttérszín*/
     color: #ffe6cc;         /*sávon lévő elemek színe*/
     transform: translateX(-12rem);
     padding-top: 3.8rem;
@@ -149,4 +161,5 @@ main h1{
 #win{
     float: right;
     padding: 0 10rem 0 1rem; 
+    
 }
